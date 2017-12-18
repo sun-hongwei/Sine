@@ -22,8 +22,9 @@ public class Main extends JPanel {
     protected void paintComponent(Graphics g) {
         final BufferedImage targetImg = new BufferedImage(1200, 300, BufferedImage.TYPE_INT_RGB);//获得一个image对象
         final Graphics g2d = targetImg.createGraphics();//获得一个图形类
-        // TODO Auto-generated method stub
-        super.paintComponent(g);
+        //调用两遍paintImage 方法
+        // 1、在JPanel 上绘制图形
+        // 2、在保存图片 上绘制保存图形
         paintImage(g2d);
         paintImage(g);
         //将画图的图形保存成图片
