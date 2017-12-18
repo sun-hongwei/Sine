@@ -63,11 +63,16 @@ public class Main extends JPanel {
 
     /**
      * 保存图片到指定文件夹
+     * 设置文件路径及文件名称在此处修改
      * @param targetImg
      */
     private void saveImage(BufferedImage targetImg){
         try {
-            ImageIO.write(targetImg, "jpeg", new File("2.jpeg"));
+            //保存路径及文件名称
+            String savePath = "D:/2.jpeg";
+            //图片格式
+            String format = "jpeg";
+            ImageIO.write(targetImg, format, new File(savePath));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -76,9 +81,9 @@ public class Main extends JPanel {
     public static void main(String[] args) throws IOException {
         Main s = new Main();
         JFrame j = new JFrame();
-        j.setTitle("正弦加余弦");
+        j.setTitle("长春易加科技有限公司");
         j.add(s);
-        j.setSize(1300, 500);
+        j.setSize(1200, 300);
         j.setLocation(300, 300);
         j.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         j.setVisible(true);
